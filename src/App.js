@@ -56,8 +56,8 @@ function App() {
 
 
   return (
-    <Fragment>
-      <div className="container">
+    <Fragment >
+      <div className="container fondo">
         <Buscar texto={texto} setTexto={setTexto}/>
         <hr />
         <Tarjetas propiedad={filtrados} nombreIngresado={texto} />
