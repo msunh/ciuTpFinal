@@ -9,8 +9,13 @@ import React from "react";
 //key= es una propiedad que recibe el indice, desde el 0 en adelante
 // y dentro de la columna creo la tarjeta con la clase "card" de bootstrap
 
+
+
 const Tarjetas = ({ propiedad, nombreIngresado }) => {
-  if (propiedad.length === 0)
+  
+  console.log(propiedad);
+
+  if (propiedad === undefined )
     return (
       <h2 className="text-center text-white ">
         Lo siento amigo, no hay personajes con el nombre "{nombreIngresado}"

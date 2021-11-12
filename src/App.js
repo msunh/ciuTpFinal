@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useEffect, Fragment } from "react";
 import Tarjetas from "./components/Tarjetas";
-import Paginar from "./components/Paginar"
+import Paginar from "./components/Paginar";
 import Buscar from "./components/Buscar";
 
 /*la funcionFetch sirve para poder realizar llamadas de red, haciendo un request a la api,
@@ -19,8 +19,7 @@ function App() {
   const [texto, setTexto] = useState("");
   const [paginacion,setPaginacion] = useState([]); /* mi state para almacenar los next y prev que vienen de la api */
 
-  //const linkFiltrar = "https://rickandmortyapi.com/api/character"
-  const link = "https://rickandmortyapi.com/api/character";
+  const linkPersonaje = `https://rickandmortyapi.com/api/character/?name=${texto}`;
 
   /* creo una funcion fetch para llamarla desde el hook 'useEffect'*/
   const funcionFetch = (link) => {
@@ -39,11 +38,9 @@ function App() {
 
   /*uso el hook, "useEffect" que nos permite manejar la llamada de red a la api,*/
   useEffect(() => {
-    funcionFetch(link);
-  }, []); /* se coloca [] para que se ejecute una sola vez, de forma controlada cuando el componente se renderiza */
-
-  //funcion de filtrado de personajes
-  const filtrados = personajes.filter(p => p.name.toLowerCase().includes(texto.toLowerCase()) );
+    funcionFetch(linkPersonaje);
+  }, [linkPersonaje]); /* se coloca [] para que se ejecute una sola vez, de forma controlada cuando el componente se renderiza */
+    
 
   /* funciones para ser utilizadas en paginacion */
   const atras = () => {
@@ -60,7 +57,7 @@ function App() {
       <div className="container fondo">
         <Buscar texto={texto} setTexto={setTexto}/>
         <hr />
-        <Tarjetas propiedad={filtrados} nombreIngresado={texto} />
+        <Tarjetas propiedad={personajes} nombreIngresado={texto} />
         {/* le mando el array de personajes a mi componente hijo como una prop */}
         <Paginar prop1={atras} prop2={siguiente}/>
         {/* le envio como props la info de mis next y prev a mi componente hijo de paginar */}
