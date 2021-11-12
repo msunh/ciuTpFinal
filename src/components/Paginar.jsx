@@ -13,19 +13,28 @@ const Paginar = ({ prop1, prop2 }) => {
   };
 
   return (
-    <div>
-      <ul className="pagination justify-content-center">
-        <li className="page-item">
-          <button className="btn btn-outline-light" onClick={atras}>
+    <div >
+
+    <div className="row mb-5 p-5 justify-content-center">
+      
+      <div className="col-md-3 offset-2">
+
+            
+
+          <button className="btn btn-lg btn-dark"  onClick={atras}>
             Atrás
           </button>
-        </li>
-        <li className="page-item">
-          <button className="btn btn-outline-light" onClick={adelante}>
+
+      </div>
+      <div className="col-md-3">
+          <button className="btn btn-lg btn-dark" onClick={adelante}>
             Siguiente
           </button>
-        </li>
-      </ul>
+      </div>
+
+    </div>
+
+    
     </div>
   );
 };

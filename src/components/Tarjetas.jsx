@@ -1,4 +1,5 @@
 import React from "react";
+import "./Tarjeta.css";
 
 //debajo del div "row" abro llaves para crear codigo js
 //es para iterar personajes para crear las columnas usando la propiedad que en
@@ -9,37 +10,57 @@ import React from "react";
 //key= es una propiedad que recibe el indice, desde el 0 en adelante
 // y dentro de la columna creo la tarjeta con la clase "card" de bootstrap
 
-
-
 const Tarjetas = ({ propiedad, nombreIngresado }) => {
-  
-  console.log(propiedad);
+  // if (propiedad === undefined)
+  //   return (
+  //     <h2 className="text-center text-white ">
+  //       Lo siento amigo, no hay personajes con el nombre "{nombreIngresado}"
+  //     </h2>
+  //   );
+  // else
+  //   return (
+  //     <div className="row">
+  //       {propiedad.map((valor, indice) => (
+  //         <div key={indice} className="col mb-1">
+  //           <div className="text-white mb-3" style={{ minWidth: "300px" }}>
+  //             <img src={valor.image} alt="" />
+  //             <div className="card-body ">
+  //               <h5 className="card-title text-decoration-underline">
+  //                 {valor.name}
+  //               </h5>
+  //               <p> Especie: {valor.species}</p>
+  //               <p> Origen: {valor.origin.name}</p>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   );
 
-  if (propiedad === undefined )
-    return (
-      <h2 className="text-center text-white ">
-        Lo siento amigo, no hay personajes con el nombre "{nombreIngresado}"
-      </h2>
-    );
-  else
-    return (
-      <div className="row">
+  return (
+    <div id="cards_landscape_wrap-2">
+      <div class="container">
+        <div class="row">
         {propiedad.map((valor, indice) => (
-          <div key={indice} className="col mb-1">
-            <div className="text-white mb-3" style={{ minWidth: "300px" }}>
-              <img src={valor.image} alt="" />
-              <div className="card-body ">
-                <h5 className="card-title text-decoration-underline">
-                  {valor.name}
-                </h5>
-                <p> Especie: {valor.species}</p>
-                <p> Origen: {valor.origin.name}</p>
+          <div key={indice} class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="card-flyer" >
+              <div class="text-box">
+                <div class="image-box">
+                  <img src={valor.image} alt="" />
+                </div>
+                <div class="text-container">
+                  <h6>{valor.name}</h6>
+                  <p> Especie: {valor.species}</p>
+                  <p> Origen: {valor.origin.name}</p>
+                </div>
               </div>
             </div>
           </div>
-        ))}
+        ))}  
+        </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Tarjetas;

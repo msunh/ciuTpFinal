@@ -13,7 +13,7 @@ const Buscar = ({ texto, setTexto }) => {
   return (
     <nav className="navbar justify-content-center">
       <form className="row" onSubmit={enviarDatos}>  
-        <div className="col-md-8 my-5">
+        <div className="col-md-12 my-5">
           <input
             className="form-control"
             placeholder="Ingrese un personaje"
@@ -24,11 +24,7 @@ const Buscar = ({ texto, setTexto }) => {
             
           />
         </div>
-        {/* <div className="col-md-3">
-          <button className="btn btn-primary my-5" type="submit" >
-            Buscar
-          </button>
-        </div> */}
+        
       </form>
     </nav>
   );
