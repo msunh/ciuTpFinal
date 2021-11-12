@@ -11,6 +11,51 @@ import "./Tarjeta.css";
 // y dentro de la columna creo la tarjeta con la clase "card" de bootstrap
 
 const Tarjetas = ({ propiedad, nombreIngresado }) => {
+
+
+  if (propiedad === undefined)
+    return (
+      <h2 className="text-center text-white ">
+        Lo siento amigo, no hay personajes con el nombre "{nombreIngresado}"
+      </h2>
+    );
+  else
+    return (
+      <div id="cards_landscape_wrap-2">
+        <div className="container">
+          <div className="row">
+            {propiedad.map((valor, indice) => (
+              <div key={indice} class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div className="card-flyer">
+                  <div className="text-box">
+                    <div className="image-box">
+                      <img src={valor.image} alt="" />
+                    </div>
+                    <div className="text-container">
+                      <h6>{valor.name}</h6>
+                      <p> Especie: {valor.species}</p>
+                      <p> Tipo: {valor.type}</p>
+                      <p> Origen: {valor.origin.name}</p>
+                      <p> Origen: {valor.location.name}</p>
+                      <p>{valor.status}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+};
+
+export default Tarjetas;
+
+
+
+
+
+  // viejas tarjetas
   // if (propiedad === undefined)
   //   return (
   //     <h2 className="text-center text-white ">
@@ -36,31 +81,3 @@ const Tarjetas = ({ propiedad, nombreIngresado }) => {
   //       ))}
   //     </div>
   //   );
-
-  return (
-    <div id="cards_landscape_wrap-2">
-      <div class="container">
-        <div class="row">
-        {propiedad.map((valor, indice) => (
-          <div key={indice} class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-            <div class="card-flyer" >
-              <div class="text-box">
-                <div class="image-box">
-                  <img src={valor.image} alt="" />
-                </div>
-                <div class="text-container">
-                  <h6>{valor.name}</h6>
-                  <p> Especie: {valor.species}</p>
-                  <p> Origen: {valor.origin.name}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}  
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Tarjetas;

@@ -21,13 +21,13 @@ const Paginar = ({ prop1, prop2 }) => {
 
             
 
-          <button className="btn btn-lg btn-dark"  onClick={atras}>
+          <button className="boton"  onClick={atras}>
             Atrás
           </button>
 
       </div>
       <div className="col-md-3">
-          <button className="btn btn-lg btn-dark" onClick={adelante}>
+          <button className="boton" onClick={adelante}>
             Siguiente
           </button>
       </div>

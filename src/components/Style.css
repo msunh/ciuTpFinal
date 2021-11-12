@@ -1,6 +1,35 @@
 body {
-  overflow: hidden; /* ocultar las scrollbars */
+  /*  overflow: hidden; ocultar las scrollbars */
  
 }
 
+.boton{
+  background-color: #7963c2;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.fondoInput{
+  background-color: #3CBC8D;
+  color: white;
+}
+
+.bordesInput{
+  border: 1px solid rgb(0, 60, 255);
+  border-radius: 4px;
+}
+
+.inputConLogo{
+  background-color: white;
+  background-image: url(/src/images/searchicon4.png);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  box-shadow: 4px 4px #464444;
+}
 

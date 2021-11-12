@@ -3,7 +3,8 @@ import React, { useState, useEffect, Fragment } from "react";
 import Tarjetas from "./Tarjetas";
 import Paginar from "./Paginar";
 import Buscar from "./Buscar";
-import axios from "axios";
+import Loguito from "./Logo"
+//import axios from "axios";
 
 /*la funcionFetch sirve para poder realizar llamadas de red, haciendo un request a la api,
 para consumir la informacion y recibe la url
@@ -69,8 +70,8 @@ function Inicio() {
   return (
     <Fragment>
       <div className="container">
+        <Loguito/>
         <Buscar texto={texto} setTexto={setTexto} />
-        <hr />
         <Tarjetas propiedad={personajes} nombreIngresado={texto} />
         {/* le mando el array de personajes a mi componente hijo como una prop */}
         <Paginar prop1={atras} prop2={siguiente} />

@@ -1,4 +1,5 @@
-import React from "react";
+
+import './Style.css'
 
 const Buscar = ({ texto, setTexto }) => {
 
@@ -13,9 +14,9 @@ const Buscar = ({ texto, setTexto }) => {
   return (
     <nav className="navbar justify-content-center">
       <form className="row" onSubmit={enviarDatos}>  
-        <div className="col-md-12 my-5">
+        <div className="col-md-12">
           <input
-            className="form-control"
+            className="form-control inputConLogo bordesInput"
             placeholder="Ingrese un personaje"
             type="text"
             name="nombre"
