@@ -1,7 +1,6 @@
 body {
-  /*  overflow: hidden; ocultar las scrollbars */
   background: url("https://wallpapertag.com/wallpaper/full/0/c/6/272191-rick-and-morty-wallpaper-1920x1080-for-windows.jpg")
-  no-repeat center center fixed;
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,7 +8,6 @@ body {
 }
 
 .boton {
-  
   background-color: #7963c2;
   border: none;
   color: white;
@@ -36,10 +34,12 @@ body {
   background-position: 5px 5px;
   background-repeat: no-repeat;
   padding-left: 40px;
-  box-shadow: 4px 4px #464444;
+  box-shadow: 5px 6px #464444;
 }
 
-.spinner{
-  width: 3rem; 
+.spinner {
+  width: 3rem;
   height: 3rem;
 }
+
+

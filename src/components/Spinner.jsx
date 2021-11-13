@@ -2,14 +2,12 @@ import "./Style.css";
 
 const Spinner = () => {
     return (
-        
-        <div class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+
+        <div className="d-flex justify-content-center mt-3">
+            <div className="spinner-border text-light" role="status">
+                <span className="visually-hidden">Loading...</span>
             </div>
         </div>
-
-
     );
 }
 
